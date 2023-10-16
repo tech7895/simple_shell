@@ -91,3 +91,36 @@ int _strcmp(char *s1, char *s2)
 
 	return (d);
 }
+
+/**
+ * stringify - This function converts a given number to a string
+ * @numbe: the number
+ *
+ * Return: nmb
+ *
+ **/
+char *stringify(int numbe)
+{
+	char *num;
+	int td, iter;
+
+	td = number(numbe);
+	num = malloc(td * sizeof(char) + 1);
+	if (num == NULL)
+		return (NULL);
+	if (numbe == 0)
+	{
+		num[0] = '0';
+		num[1] = '\0';
+		return (num);
+	}
+
+	num[td] = '\0';
+
+	for (iter = td - 1; numbe != 0; numbe /= 10, iter--)
+	{
+		num[iter] = (numbe % 10) + '0';
+	}
+
+	return (num);
+}
