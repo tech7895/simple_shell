@@ -93,13 +93,13 @@ int _strcmp(char *s1, char *s2)
 }
 
 /**
- * stringify - This function converts a given number to a string
+ * _toString - This function converts a given number to a string
  * @numbe: the number
  *
  * Return: nmb
  *
  **/
-char *stringify(int numbe)
+char *_toString(int numbe)
 {
 	char *num;
 	int td, iter;

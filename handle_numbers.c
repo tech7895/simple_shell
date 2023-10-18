@@ -23,7 +23,7 @@ int number(int num)
 
 
 /**
- * manageNumbers - This function Controls the argument of the exit builtin
+ * handle_num - This function Controls the argument of the exit builtin
  * @b_type: a struct
  * @argument: the argument
  *
@@ -31,7 +31,7 @@ int number(int num)
  *
  **/
 
-int manageNumbers(b_shell_t *b_type, char *argument)
+int handle_num(b_shell_t *b_type, char *argument)
 {
 	int t;
 
@@ -41,7 +41,7 @@ int manageNumbers(b_shell_t *b_type, char *argument)
 	{
 		b_type->c_status = 2;
 		b_type->e_dig = 133;
-		additionalError(b_type, argument);
+		addErr(b_type, argument);
 		return (0);
 	}
 

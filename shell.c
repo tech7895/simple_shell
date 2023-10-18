@@ -21,14 +21,14 @@ int main(int ac, char **av)
 	}
 
 	b_type->pid = getpid();
-	b_type->code_stat = 0;
+	b_type->c_status = 0;
 	b_type->n_cmd = 0;
 	b_type->argc = ac;
 	b_type->argv = av;
 	b_type->it_mode = isatty(0) == 1;
 	begin(b_type);
 
-	cond = b_type->code_stat;
+	cond = b_type->c_status;
 
 	free(b_type);
 

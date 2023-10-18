@@ -14,7 +14,7 @@ void issue(b_shell_t *b_type)
 
 	num = NULL;
 	msg = selectMessage(*b_type);
-	num = stringify(b_type->n_cmd);
+	num = _toString(b_type->n_cmd);
 
 	sn = _strlen(num);
 	sm = _strlen(b_type->argv[0]);
@@ -47,13 +47,13 @@ int displayError(char *message)
 }
 
 /**
- * additionalError - This function Prints the error message
+ * addErr - This function Prints the error message
  * @b_type: a struct
  * @more: the information
  *
  * Return: void
  **/
-void additionalError(b_shell_t *b_type, char *more)
+void addErr(b_shell_t *b_type, char *more)
 {
 	char *messag, *n1, *au, *au2;
 	int n1_size, messag_size;
@@ -61,7 +61,7 @@ void additionalError(b_shell_t *b_type, char *more)
 
 	n1 = NULL;
 	messag = selectMessage(*b_type);
-	n1 = stringify(b_type->n_cmd);
+	n1 = _toString(b_type->n_cmd);
 
 	n1_size = _strlen(n1);
 	messag_size = _strlen(b_type->argv[0]);
